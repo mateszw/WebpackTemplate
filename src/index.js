@@ -1,3 +1,3 @@
 import "./main.scss";
-const x = 23;
-console.log(`The output is ${x}`);
+import * as ts from "./app";
+ts.test();
