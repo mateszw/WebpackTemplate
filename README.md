@@ -1,3 +1,3 @@
 # WebpackTemplate npm install , npm start
 
-Webpack contains Babel,bootstrap,sass,dev-server
+Webpack contains Babel,bootstrap,sass,dev-server,Typescript 
