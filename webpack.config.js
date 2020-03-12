@@ -1,11 +1,12 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "development",
     entry: ["babel-polyfill", "./src/index.js", "./src/app.ts"],
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', '.scss'],
     },
     output: {
         filename: "main.js",
@@ -15,11 +16,20 @@ module.exports = {
 
     plugins: [new HtmlWebpackPlugin({
         template: "./src/index.html"
+    }), new MiniCssExtractPlugin({
+        filename: '[name].min.css'
     })],
     module: {
         rules: [{
-                test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', "postcss-loader"]
+            },
+
+            {
+
+                test: /\.(sass|scss)$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+
             },
             {
                 test: /\.js$/,

@@ -1,3 +1,7 @@
 import "./main.scss";
-import * as ts from "./app";
-ts.test();
+
+import {
+    test
+} from './app';
+
+test();
