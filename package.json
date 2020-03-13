@@ -31,5 +31,7 @@
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  }
 }
