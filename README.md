@@ -14,7 +14,7 @@
 
 ## Packages
  
-  "@babel/core": "^7.8.7",
+    "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/register": "^7.8.6",
     "autoprefixer": "^9.7.4",
@@ -33,7 +33,6 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
-
 
 
 ## Author
